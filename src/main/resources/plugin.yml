@@ -2,3 +2,5 @@ main: net.glove.hub.Hub
 version: 1.0-(BETA)
 name: Hub
 author: Glove-Development-Team
+depend:
+  - Global

@@ -47,8 +47,6 @@ public class ServerSelectorMenu extends Menu {
 
         @Override
         public ItemStack getButtonItem(Player player) {
-
-
             return new ItemBuilder(material).durability(durability).name(name).lore(lore).build();
         }
     }
