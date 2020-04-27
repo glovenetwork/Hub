@@ -57,7 +57,6 @@ public class EditorListeners implements Listener {
                 }
             }
         }
-        System.out.println("Asdasd");
         serverMenu.save();
         CreateMenu.getPlayerOpenMenu().remove(player.getUniqueId());
     }

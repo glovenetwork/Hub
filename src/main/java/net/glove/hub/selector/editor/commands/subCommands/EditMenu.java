@@ -9,7 +9,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 
-@CommandInfo("editmenu")
+@CommandInfo({"editmenu", "edit"})
 public class EditMenu implements BaseCommand {
 
     @CommandExecutor
@@ -20,7 +20,7 @@ public class EditMenu implements BaseCommand {
             return;
         }
 
-        Inventory inventory = Bukkit.createInventory(null, 9 * 6, CC.translate(menu.getTitle()));
+        Inventory inventory = Bukkit.createInventory(null, 9 * 6, CC.translate("&9Editing&7:&f " + menu.getTitle()));
 
         menu.getCommonItems().forEach(commonItem -> inventory.setItem(commonItem.getSlot(), commonItem.getItem()));
 

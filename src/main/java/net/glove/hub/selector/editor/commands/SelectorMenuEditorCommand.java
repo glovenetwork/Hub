@@ -7,6 +7,7 @@ import net.glove.global.utils.command.annotation.CommandInfo;
 import net.glove.hub.selector.editor.commands.subCommands.CreateMenu;
 import net.glove.hub.selector.editor.commands.subCommands.EditMenu;
 import net.glove.hub.selector.editor.commands.subCommands.List;
+import net.glove.hub.selector.editor.commands.subCommands.RemoveMenu;
 import org.bukkit.entity.Player;
 
 import java.util.Set;
@@ -21,9 +22,10 @@ public class SelectorMenuEditorCommand implements BaseCommand {
 
     @CommandExecutor
     public void execute(Player player){
-        player.sendMessage("&b&lSelector Editor help");
+        player.sendMessage("&b&lServer Selector Editor help");
         player.sendMessage("&7/selectormenueditor createmenu (Title)");
         player.sendMessage("&7/selectormenueditor editMenu (ID)");
+        player.sendMessage("&7/selectormenueditor removeMenu (ID)");
         player.sendMessage("&7/selectormenueditor list");
     }
 
@@ -32,7 +34,8 @@ public class SelectorMenuEditorCommand implements BaseCommand {
         return Sets.newHashSet(
             new CreateMenu(),
             new EditMenu(),
-            new List()
+            new List(),
+            new RemoveMenu()
         );
     }
 }
